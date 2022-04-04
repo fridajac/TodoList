@@ -10,6 +10,7 @@ const ListItem = (props) => {
     listStyleType: "none",
     textTransform: "uppercase",
     fontSize: inHover ? "25px" : "20px",
+    textDecoration: checked ? "line-through" : "none",
   };
   return (
     <div
