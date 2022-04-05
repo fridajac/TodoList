@@ -1,9 +1,9 @@
 import { useState } from "react";
 const TextInputField = () => {
-  const [text, setText] = useState("");
+  const [userInput, setUserInput] = useState("");
 
   const submitValue = () => {
-    const inputText = text;
+    const inputText = userInput;
     alert(inputText);
   };
 
@@ -19,7 +19,7 @@ const TextInputField = () => {
     <form onSubmit={submitValue}>
       <input
         type="text"
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => setUserInput(e.target.value)}
         style={inputStyle}
       ></input>
     </form>
