@@ -1,7 +1,6 @@
 import ListItem from "./ListItem";
 const List = (props) => {
-  const toDoList = ["Clean kitchen", "Buy milk", "Work out"];
-  const listItems = toDoList.map((element, index) => (
+  const listItems = props.toDoList.map((element, index) => (
     <ListItem key={index} value={element} />
   ));
   return (

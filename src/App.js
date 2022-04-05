@@ -1,14 +1,18 @@
 import "./App.css";
+import { useState } from "react";
 import List from "./comps/List";
 import Title from "./comps/Title";
-import TextInputField from "./comps/TextInputField";
+import Form from "./comps/Form";
 
 function App() {
+  //const [toDoList, setToDoList] = useState("");
+  const toDoList = ["Eat", "Drink", "Sleep"];
+
   return (
     <div className="App">
       <Title />
-      <TextInputField />
-      <List name="Frida" />
+      <Form />
+      <List toDoList={toDoList} />
     </div>
   );
 }
