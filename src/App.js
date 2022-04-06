@@ -1,18 +1,22 @@
 import "./App.css";
-import { useState } from "react";
 import List from "./comps/List";
 import Title from "./comps/Title";
 import Form from "./comps/Form";
+import { useState } from "react";
 
 function App() {
-  //const [toDoList, setToDoList] = useState("");
-  const toDoList = ["Eat", "Drink", "Sleep"];
+  const [todos, setTodos] = useState([]);
+
+  const addTodos = (text) => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
 
   return (
     <div className="App">
       <Title />
-      <Form />
-      <List toDoList={toDoList} />
+      <Form addTodos={addTodos} />
+      <List todos={todos} />
     </div>
   );
 }

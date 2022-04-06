@@ -1,11 +1,19 @@
 import ListItem from "./ListItem";
-const List = (props) => {
-  const listItems = props.toDoList.map((element, index) => (
+const List = ({ todos }) => {
+  const listItems = todos.map((element, index) => (
     <ListItem key={index} value={element} />
   ));
   return (
     <div className="list">
-      <ul>{listItems}</ul>
+      {
+        <ul style={{ listStyleType: "none" }}>
+          {todos.map((element, index) => (
+            <li key={index}>
+              <ListItem value={element} />
+            </li>
+          ))}
+        </ul>
+      }
     </div>
   );
 };
