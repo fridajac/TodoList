@@ -37,24 +37,5 @@ form {
   text-align: center;
 }
 
-.list{
-  text-align: center;
-  max-width: 500px;
-  margin-left: 200px;
-}
-.checkbox {
-  width: 1.3em;
-  height: 1.3em;
-  background-color: white;
-  border-radius: 50%;
-  vertical-align: middle;
-  border: 1px solid #ddd;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;
-}
 
-.checkbox:checked {
-  background-color: black;
-}
+  
