@@ -6,7 +6,7 @@ const List = ({ todos }) => {
   return (
     <div className="list">
       {
-        <ul style={{ listStyleType: "none" }}>
+        <ul style={{ listStyleType: "none", marginTop: "3rem" }}>
           {todos.map((element, index) => (
             <li key={index}>
               <ListItem value={element} />

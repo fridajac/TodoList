@@ -5,7 +5,7 @@ const ListItem = (props) => {
   const [checked, setChecked] = useState(false);
   const labelStyle = {
     fontSize: inHover ? "25px" : "20px",
-    checked,
+    textDecoration: checked ? "line-through" : "none",
   };
 
   return (
@@ -15,9 +15,11 @@ const ListItem = (props) => {
         className="listLabel"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        onClick={() => (checked ? setChecked(false) : setChecked(true))}
       >
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          onClick={() => (checked ? setChecked(false) : setChecked(true))}
+        ></input>
         {props.value.text}
       </label>
     </div>
